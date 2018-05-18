@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Movies App
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label stacked>Username</ion-label>
+        <ion-input color="primary" clearInput></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>Password</ion-label>
+        <ion-input type="password" color="primary" clearInput></ion-input>
+      </ion-item>
+
+    </ion-col>
+  </ion-row>
+  <button ion-button block (click)="login();" uppercase [disabled]="buscandoPeliculas">Ingresar</button>
+</ion-content>
