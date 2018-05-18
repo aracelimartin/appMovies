@@ -16,12 +16,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'detail-movie.html',
 })
 export class DetailMoviePage {
+    public movieDetail;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams) {
+    this.movieDetail = this.navParams.get('movie');
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DetailMoviePage');
   }
+
+    public closeModal(): void {
+        this.navCtrl.pop();
+    }
 
 }

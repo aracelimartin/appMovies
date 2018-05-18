@@ -6,13 +6,29 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>DetailMoviePage</ion-title>
-  </ion-navbar>
+  <ion-toolbar>
+    <ion-title>More about <span [innerText]="movieDetail?.Title"></span></ion-title>
+    <ion-buttons left>
+      <button ion-button (click)="closeModal();"> <ion-icon name="ios-arrow-dropleft"></ion-icon></button>
+    </ion-buttons>
+  </ion-toolbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h3 class="title" [innerText]="movieDetail?.Title"></h3>
+        <h6 class="title" [innerText]="movieDetail?.Year"></h6>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-8 offset-2>
+        <img [src]="movieDetail?.Poster" [alt]="movieDetail?.Title">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+
